@@ -1,0 +1,20 @@
+
+
+use a list to store which buttons have been press
+
+cycle through the list 
+if button has not been press change display
+if button has been pressed do not change display
+if list is add# in length play 1 "X" turn
+if list is even# in length play 2 "O" turn
+if list is 9 in leangh end game
+
+
+<p id="demo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+if(fruits.includes("Mango") & fruits.includes("Banana")){
+document.getElementById("demo").innerHTML = fruits.includes("Mango", "Banana");
+}
