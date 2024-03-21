@@ -1,6 +1,7 @@
 
 
 const blocksPressed = [];
+const blocksTracked = [];
 
 function gameFunction(clicked_id) {
 	
@@ -14,16 +15,19 @@ function gameFunction(clicked_id) {
 		document.getElementById("blockspressed").innerHTML = this_id + "has been pressed";
 	}
 	else{
-		document.getElementById("blockspressed").innerHTML = this_id + "has not been pressed";
+		document.getElementById("blockspressed").innerHTML = this_id + " has not been pressed";
 		//blocksPressed.push(this_id);
 		if(listLength % 2 == 0) {
-			blocksPressed.push(this_id + "X");
+			blocksPressed.push(this_id);
+			blocksTracked.push(this_id + "X");	//change this to a new array to tack which block was pressed by who
 		}
 		else{
-			blocksPressed.push(this_id + "O");
+			blocksPressed.push(this_id);
+			blocksTracked.push(this_id + "O"); //change this to a new array to tack which block was pressed by who
 		}
 
 		document.getElementById("testList").innerHTML = blocksPressed;
+		document.getElementById("blocksTracked").innerHTML = blocksTracked;
 		changeBlock(this_id);
 		//winner();
 	}
