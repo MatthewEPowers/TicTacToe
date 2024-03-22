@@ -21,7 +21,6 @@ function gameFunction(clicked_id) {
 
 	if(blocksPressed.length == 9){
 		document.getElementById("playerTurn").innerHTML = "Game Over!";
-		//winner();
 	}
 	winner();
 
@@ -88,13 +87,99 @@ function winner(){
 	*/
 	//document.getElementById("playerwinner").innerHTML = "Player X is the Winner!";
 
+	// Check to see if X has won the game
 	if(blocksTracked.includes("Block1X") & blocksTracked.includes("Block2X") & blocksTracked.includes("Block3X")){
 		document.getElementById("playerwinner").innerHTML = "Player X is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
 		activeGame = false;
 	}
 
 	if(blocksTracked.includes("Block4X") & blocksTracked.includes("Block5X") & blocksTracked.includes("Block6X")){
 		document.getElementById("playerwinner").innerHTML = "Player X is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
+		activeGame = false;
+	}
+
+	if(blocksTracked.includes("Block7X") & blocksTracked.includes("Block8X") & blocksTracked.includes("Block9X")){
+		document.getElementById("playerwinner").innerHTML = "Player X is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
+		activeGame = false;
+	}
+
+	if(blocksTracked.includes("Block1X") & blocksTracked.includes("Block4X") & blocksTracked.includes("Block7X")){
+		document.getElementById("playerwinner").innerHTML = "Player X is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
+		activeGame = false;
+	}
+
+	if(blocksTracked.includes("Block2X") & blocksTracked.includes("Block5X") & blocksTracked.includes("Block8X")){
+		document.getElementById("playerwinner").innerHTML = "Player X is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
+		activeGame = false;
+	}
+
+	if(blocksTracked.includes("Block3X") & blocksTracked.includes("Block6X") & blocksTracked.includes("Block9X")){
+		document.getElementById("playerwinner").innerHTML = "Player X is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
+		activeGame = false;
+	}
+
+	if(blocksTracked.includes("Block1X") & blocksTracked.includes("Block5X") & blocksTracked.includes("Block9X")){
+		document.getElementById("playerwinner").innerHTML = "Player X is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
+		activeGame = false;
+	}
+
+	if(blocksTracked.includes("Block3X") & blocksTracked.includes("Block5X") & blocksTracked.includes("Block7X")){
+		document.getElementById("playerwinner").innerHTML = "Player X is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
+		activeGame = false;
+	}
+
+	// Check to see if O has won the game
+	if(blocksTracked.includes("Block1O") & blocksTracked.includes("Block2O") & blocksTracked.includes("Block3O")){
+		document.getElementById("playerwinner").innerHTML = "Player O is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
+		activeGame = false;
+	}
+
+	if(blocksTracked.includes("Block4O") & blocksTracked.includes("Block5O") & blocksTracked.includes("Block6O")){
+		document.getElementById("playerwinner").innerHTML = "Player O is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
+		activeGame = false;
+	}
+
+	if(blocksTracked.includes("Block7O") & blocksTracked.includes("Block8O") & blocksTracked.includes("Block9O")){
+		document.getElementById("playerwinner").innerHTML = "Player O is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
+		activeGame = false;
+	}
+
+	if(blocksTracked.includes("Block1O") & blocksTracked.includes("Block4O") & blocksTracked.includes("Block7O")){
+		document.getElementById("playerwinner").innerHTML = "Player O is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
+		activeGame = false;
+	}
+
+	if(blocksTracked.includes("Block2O") & blocksTracked.includes("Block5O") & blocksTracked.includes("Block8O")){
+		document.getElementById("playerwinner").innerHTML = "Player O is the Winner!";
+		activeGame = false;
+	}
+
+	if(blocksTracked.includes("Block3O") & blocksTracked.includes("Block6O") & blocksTracked.includes("Block9O")){
+		document.getElementById("playerwinner").innerHTML = "Player O is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
+		activeGame = false;
+	}
+
+	if(blocksTracked.includes("Block1O") & blocksTracked.includes("Block5O") & blocksTracked.includes("Block9O")){
+		document.getElementById("playerwinner").innerHTML = "Player O is the Winner!";
+		activeGame = false;
+	}
+
+	if(blocksTracked.includes("Block3O") & blocksTracked.includes("Block5O") & blocksTracked.includes("Block7O")){
+		document.getElementById("playerwinner").innerHTML = "Player O is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
 		activeGame = false;
 	}
 
