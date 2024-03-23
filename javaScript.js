@@ -13,10 +13,12 @@ function gameFunction(clicked_id) {
 	
 	if(activeGame == true){
 		setBlock(block_id);
-		document.getElementById("isGameTrue").innerHTML = activeGame;
+		//document.getElementById("isGameTrue").innerHTML = activeGame;
+		console.log(activeGame);
 	}
 	else{
-		document.getElementById("isGameTrue").innerHTML = activeGame;
+		//document.getElementById("isGameTrue").innerHTML = activeGame;
+		console.log(activeGame);
 	}
 
 	if(blocksPressed.length == 9){
@@ -33,10 +35,12 @@ function setBlock(clicked_id){
 	
 	// Check if the block has been pressed before 
 	if(blocksPressed.includes(block_id)){
-		document.getElementById("blockspressed").innerHTML = block_id + "has been pressed";
+		//document.getElementById("blockspressed").innerHTML = block_id + "has been pressed";
+		console.log(block_id + "has been pressed");
 	}
 	else{
-		document.getElementById("blockspressed").innerHTML = block_id + " has not been pressed";
+		//document.getElementById("blockspressed").innerHTML = block_id + " has not been pressed";
+		console.log(block_id + " has not been pressed");
 		//blocksPressed.push(this_id);
 		if(listLength % 2 == 0) {
 			blocksPressed.push(block_id);
@@ -47,8 +51,10 @@ function setBlock(clicked_id){
 			blocksTracked.push(block_id + "O"); //change this to a new array to tack which block was pressed by who
 		}
 
-		document.getElementById("testList").innerHTML = blocksPressed;
-		document.getElementById("blocksTracked").innerHTML = blocksTracked;
+		//document.getElementById("testList").innerHTML = blocksPressed;
+		console.log(blocksPressed);
+		//document.getElementById("blocksTracked").innerHTML = blocksTracked;
+		console.log(blocksTracked);
 		changeBlock(block_id);
 		//winner();
 	}
@@ -61,9 +67,12 @@ function changeBlock (clicked_id){
 	var setBlock = document.getElementById(block_id);
 	let listLength = blocksPressed.length;
 
-	document.getElementById("test").innerHTML = block_id + " was pressed";
-	document.getElementById("testList").innerHTML = blocksPressed;
-	document.getElementById("testListLength").innerHTML = listLength;
+	//document.getElementById("test").innerHTML = block_id + " was pressed";
+	console.log(block_id + " was pressed");
+	//document.getElementById("testList").innerHTML = blocksPressed;
+	console.log(blocksPressed);
+	//document.getElementById("testListLength").innerHTML = listLength;
+	console.log(listLength);
 	
 	if(listLength % 2 == 0) {
 		document.getElementById("playerTurn").innerHTML = "Player X Turn";
@@ -80,13 +89,6 @@ function changeBlock (clicked_id){
 
 function winner(){
 	
-/*
-	if(blocksPressed.at(1) == "Block1" && blocksPressed.at(3) == "Block2" && blocksPressed.at(5) == "Block3"){
-		document.getElementById("playerwinner").innerHTML = "Player X is the Winner!";
-	}
-	*/
-	//document.getElementById("playerwinner").innerHTML = "Player X is the Winner!";
-
 	// Check to see if X has won the game
 	if(blocksTracked.includes("Block1X") & blocksTracked.includes("Block2X") & blocksTracked.includes("Block3X")){
 		document.getElementById("playerwinner").innerHTML = "Player X is the Winner!";
@@ -163,6 +165,7 @@ function winner(){
 
 	if(blocksTracked.includes("Block2O") & blocksTracked.includes("Block5O") & blocksTracked.includes("Block8O")){
 		document.getElementById("playerwinner").innerHTML = "Player O is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
 		activeGame = false;
 	}
 
@@ -174,6 +177,7 @@ function winner(){
 
 	if(blocksTracked.includes("Block1O") & blocksTracked.includes("Block5O") & blocksTracked.includes("Block9O")){
 		document.getElementById("playerwinner").innerHTML = "Player O is the Winner!";
+		document.getElementById("playerTurn").innerHTML = "Game Over!";
 		activeGame = false;
 	}
 

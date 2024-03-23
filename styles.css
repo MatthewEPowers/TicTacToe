@@ -1,7 +1,13 @@
 body {
-  background-color: lightgray;
+  background-color: lightblue;
   text-align: center;
 }
 table{
-	text-align: center;
+	margin: auto;
+}
+
+button{
+  height: 100px;
+  width: 100px;
+  font-size: large;
 }
