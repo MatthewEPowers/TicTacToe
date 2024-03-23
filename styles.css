@@ -1,6 +1,10 @@
+
 body {
-  background-color: lightblue;
   text-align: center;
+}
+.background{
+  background: rgb(48,45,253);
+  background: linear-gradient(0deg, rgba(195,34,34,1) 0%, rgba(48,45,253,1) 100%);
 }
 table{
 	margin: auto;
