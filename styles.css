@@ -11,10 +11,60 @@ body, html {
 }
 table{
 	margin: auto;
+  background-color: black;
 }
+
 
 button{
   height: 100px;
   width: 100px;
   font-size: 50px;
+}
+
+.TRB{
+  border: 3px solid black;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+
+.TCB{
+  border: 3px solid black;
+  border-top-color: transparent;
+}
+
+.TLB{
+  border: 3px solid black;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+.CCB{
+  border: 3px solid black;
+}
+
+.BRB{
+  border: 3px solid black;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.BCB{
+  border: 3px solid black;
+  border-bottom-color: transparent;
+}
+
+.BLB{
+  border: 3px solid black;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+
+.LCB{
+  border: 3px solid black;
+  border-left-color: transparent;
+}
+
+.RCB{
+  border: 3px solid black;
+  border-right-color: transparent;
 }
