@@ -9,7 +9,6 @@ function gameFunction(clicked_id) {
 
 
 	let block_id = clicked_id;
-	//let listLength = blocksPressed.length;
 	
 	if(activeGame == true){
 		setBlock(block_id);
@@ -23,6 +22,7 @@ function gameFunction(clicked_id) {
 
 	if(blocksPressed.length == 9){
 		document.getElementById("playerTurn").innerHTML = "Game Over!";
+		document.getElementById("playerwinner").innerHTML = "Draw";
 	}
 	winner();
 
@@ -30,6 +30,9 @@ function gameFunction(clicked_id) {
 
 
 function setBlock(clicked_id){
+
+	// track the blocks that have been pressed and by which player they have been pressed by
+
 	let block_id = clicked_id;
 	let listLength = blocksPressed.length;
 	
@@ -56,7 +59,6 @@ function setBlock(clicked_id){
 		//document.getElementById("blocksTracked").innerHTML = blocksTracked;
 		console.log(blocksTracked);
 		changeBlock(block_id);
-		//winner();
 	}
 }
 
@@ -89,6 +91,7 @@ function changeBlock (clicked_id){
 
 function winner(){
 	
+	// Run checks to see if a player has won the game
 	// Check to see if X has won the game
 	if(blocksTracked.includes("Block1X") & blocksTracked.includes("Block2X") & blocksTracked.includes("Block3X")){
 		document.getElementById("playerwinner").innerHTML = "Player X is the Winner!";

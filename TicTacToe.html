@@ -4,44 +4,46 @@
 <link rel="stylesheet" href="styles.css">
 <title>Tic Tac Toe Game</title>
 </head>
-<body>
-<div class="background">
-  <h1>Welcome To Tic Tac Toe</h1>
+<body class="background">
 
-<h3 id="playerTurn">Player X Turn</h3>
-<h3 id="playerwinner"></h3>
-<p id="incorectPress"></p>
+    <h1>Welcome To Tic Tac Toe</h1>
 
-<!-- Table for The Game -->
+  <h3 id="playerTurn">Player X Turn</h3>
+  <h3 id="playerwinner"></h3>
+  <p id="incorectPress"></p>
 
-<table>
-  <tr>
-    <th><button onclick="gameFunction(this.id)" id="Block1"></button></th>
-    <th><button onclick="gameFunction(this.id)" id="Block2"></button></th>
-    <th><button onclick="gameFunction(this.id)" id="Block3"></button></th>
-  </tr>
-  <tr>
-    <td><button onclick="gameFunction(this.id)" id="Block4"></button></td>
-    <td><button onclick="gameFunction(this.id)" id="Block5"></button></td>
-    <td><button onclick="gameFunction(this.id)" id="Block6"></button></td>
-  </tr>
-  <tr>
-    <td><button onclick="gameFunction(this.id)" id="Block7"></button></td>
-    <td><button onclick="gameFunction(this.id)" id="Block8"></button></td>
-    <td><button onclick="gameFunction(this.id)" id="Block9"></button></td>
-  </tr>
-</table>
+  <!-- Table for The Game -->
 
-<p id="test"></P>
-<p id="testList"></P>
-<p id="blocksTracked"></P>
-<p id="testListLength"></P>
-<p id="blockspressed"></P>
-<p id="isGameTrue"></p>
-  
+  <table>
+    <tr>
+      <th><button onclick="gameFunction(this.id)" id="Block1"></button></th>
+      <th><button onclick="gameFunction(this.id)" id="Block2"></button></th>
+      <th><button onclick="gameFunction(this.id)" id="Block3"></button></th>
+    </tr>
+    <tr>
+      <td><button onclick="gameFunction(this.id)" id="Block4"></button></td>
+      <td><button onclick="gameFunction(this.id)" id="Block5"></button></td>
+      <td><button onclick="gameFunction(this.id)" id="Block6"></button></td>
+    </tr>
+    <tr>
+      <td><button onclick="gameFunction(this.id)" id="Block7"></button></td>
+      <td><button onclick="gameFunction(this.id)" id="Block8"></button></td>
+      <td><button onclick="gameFunction(this.id)" id="Block9"></button></td>
+    </tr>
+  </table>
 
-<script src="javaScript.js"></script>
-</div>
+  <!-- Used for testing and trouble shooting -->
+  <!-- 
+  <p id="test"></P>
+  <p id="testList"></P>
+  <p id="blocksTracked"></P>
+  <p id="testListLength"></P>
+  <p id="blockspressed"></P>
+  <p id="isGameTrue"></p>
+  -->
+    
+
+  <script src="javaScript.js"></script>
 
 
 </body>
